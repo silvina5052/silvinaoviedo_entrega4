@@ -1,0 +1,182 @@
+$color_del_tema: normal;
+$font-size: 20px;
+
+p{ /*acá trabajamos variables($), condiciones(if y else) y operaciones(multiplicar, dividir) */
+    @if $color_del_tema == normal{
+        color:rgb(46, 46, 48);
+        font-size: $font-size;
+
+    } @else if $color_del_tema == violeta { /*caso contrario...*/
+        color: rgb(144, 19, 148); 
+        font-size: $font-size /2; 
+    
+    } @else { /*sino cumple ninguna de las anteriores*/
+        color: grey; 
+    }
+
+}
+
+
+
+.no-gutters{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.body{
+    padding: 0 !important;
+}
+
+/*navbar*/
+.navbar {
+    background-image: linear-gradient(to bottom, rgb(170, 101, 155),rgb(238, 227, 248));
+    font-family: 'Overlock', cursive;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    color: black !important;
+
+}
+
+.nav-link {
+    color: black !important;
+    
+}
+
+.nav-item{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.nav-item :hover {
+    color: rgb(182, 33, 145) !important;
+}
+
+.logo{
+    width: 100px;
+}
+
+/*carrusel*/
+
+.carousel-item{
+    height: 400px;
+
+}
+
+@media (min-width: 992px){
+    .carousel-item {
+        height: 50vh !important;
+    
+    }
+}
+
+.slide1{
+    background-image: url(../../imagenes/banner_inicio.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.slide2{
+    background-image: url(../../imagenes/banner_branding.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.slide3{
+    background-image: url(../../imagenes/banner_eventos.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.slide4{
+    background-image: url(../../imagenes/banner_regalos.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.slide5{
+    background-image: url(../../imagenes/banner_contacto.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+/*texto bienvenido*/
+
+.about-text{
+    font-family: 'Overlock', cursive;
+    padding: 1rem 2rem 2rem 1em;
+    font-size: 1rem;
+
+}
+
+/**/
+
+.card {
+    margin: 0 auto;
+    padding: 1rem 2rem 2rem 1em;
+}
+
+/*galeria*/
+
+.container-fluid{
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  
+  .column {
+    flex: 25%;
+    max-width: 33.3%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    filter: grayscale(1) brightness(0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+  .column img:hover {
+    filter: grayscale(0);
+  }
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .column img {
+      filter: grayscale(0) brightness(1);
+    }
+
+    $color_del_tema: normal;
+    
+    p{    
+    @if $color_del_tema == normal{
+        color:rgb(180, 15, 172);
+        
+
+    } @else if $color_del_tema == dark { /*caso contrario...*/
+        color: black; 
+        
+    } @else { /*sino cumple ninguna de las anteriores*/
+        color: grey; 
+    }
+}
+
+  }
+  
+ 
